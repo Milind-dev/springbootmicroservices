@@ -20,8 +20,8 @@ public class DepartmentController {
         DepartmentDto savedDepartment = departmentService.saveDepartment(departmentDto);
         return new ResponseEntity<>(savedDepartment, HttpStatus.CREATED);
     }
-    @GetMapping("{departmentcode}")
-    public ResponseEntity<DepartmentDto> getDepartment(@PathVariable("departmentcode") String departmentcode){
+    @GetMapping("{department-code}")
+    public ResponseEntity<DepartmentDto> getDepartment(@PathVariable("department-code") String departmentcode){
         DepartmentDto departmentDto = departmentService.getDepartmentByCode(departmentcode);
         return  new ResponseEntity<>(departmentDto,HttpStatus.OK);
     }
